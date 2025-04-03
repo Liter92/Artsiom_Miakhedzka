@@ -1,0 +1,7 @@
+FROM python:3.9
+WORKDIR /task2
+COPY requirements.txt /task2/
+COPY app.py /task2/
+RUN pip install --no-cache-dir -r requirements.txt
+EXPOSE 5000
+CMD ["python", "app.py"]
